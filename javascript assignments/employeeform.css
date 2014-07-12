@@ -1,0 +1,103 @@
+/* CSS Document */
+*{
+	margin:0px;
+	padding:opx;
+}
+
+
+#main-wrapper{
+	width:800px;
+	background-color:#666666;
+	margin:auto;
+}
+
+
+
+#header-wrapper{
+	background-color:#008CBA;
+	height:6em;
+	margin:auto;
+}
+
+
+
+h2{
+	margin:auto;
+	text-align:center;
+	padding-top:30px;
+	font-size:35px;
+	color:#fff;
+}
+
+#form-wrapper{
+	width:auto;
+	height:100%;
+	margin:auto;
+	border-top:3px solid #006699;
+	border-right:3px solid #006699;
+	border-left:3px solid #006699;
+	background-color:#fff;
+}
+
+#form-wrapper table{
+	padding-top:20px;
+	margin:auto;
+	position:relative;
+}
+
+#form-wrapper h1{
+	margin:auto;
+	text-align:center;
+	padding-top:35px;
+	text-decoration:underline;
+}
+
+#form-wrapper table td{
+	font-size:24px;
+}
+
+/*#form-wrapper table td #submitbtn{
+	font-size:20px;
+	color:#FF0000;
+	margin-left:400px;
+}*/
+
+[type="button"] {  
+clear: left;  
+margin: 10px 0 20px 440px;  
+font-size:18px; 
+}  
+
+
+#nameerror, #addresserror, #ageerror, #emailerror{
+	float:right;
+	padding-right:10px;
+	color:#FF0000;
+}
+
+#table-wrapper{
+	margin:auto;
+	border:3px solid #006699;
+	background-color:#fff;
+}
+
+#table-wrapper table{
+	padding-left:90px;
+	position:relative;
+}
+	
+
+
+#footer-wrapper{
+	background-color:#008CBA;
+	height:6em;
+	margin:auto;
+}
+
+
+#footer{
+	padding:20px 0 0 200px;
+}
+
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Employee Form</title>
+<link href="employeeform.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="main-wrapper">
+	<div id="header-wrapper">
+    	<h2>Trainee Management System</h2>
+  	</div>
+  	<div id="body-wrapper">
+    	<div id="form-wrapper">
+      		<form name="form1" action="" method="">  <!--onsubmit="return validate()"-->
+	  		<h1>Trainee Info Form</h1>
+        		<table cellpadding="2px" cellspacing="2px">
+					<tr>
+						<td><input type="hidden" id="trainee_hidden"  /></td>
+					</tr>
+          			<tr>
+            			<td>*Name:</td>
+            			<td><input type="text" id="trainee_name" name="name"/><div id="nameerror"></div></td>
+          			</tr>
+          			<tr>
+            			<td>*Address:</td>
+            			<td><input type="text" id="trainee_address" name="address"/><div id="addresserror"></div></td>
+          			</tr>
+          			<tr>
+            			<td>*Age:</td>
+            			<td><input type="text" id="trainee_age" name="age"/><div id="ageerror"></div></td>
+          			</tr>
+          		</table>
+            			<input type="button" value="submit" id="submit" onclick="router()"/>
+
+
+      		</form>
+    	</div>
+		<div id="table-wrapper">
+			<table id="tbltrainees" width="100%">
+				<tr>
+					<td>S.No.</td>
+					<td>Name</td>
+					<td>Address</td>
+					<td>Age</td>
+					<td>Actions</td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+  	</div>
+  	<div id="footer-wrapper">
+    	<p id="footer"> Copyright &copy; 2014 Leapfrog Technology Inc. | All Rights Reserved.<br />
+      					Jagadamba Press Building, Hattiban; Lalitpur <br/>
+      					<a href="#">www.lftechnology.com</a> </p>
+  	</div>
+</div>
+<script src="employeeform.js" type="text/javascript"></script>
+</body>
+</html>

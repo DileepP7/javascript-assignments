@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body>
+	<div id="main-wrapper">
+		<div id="body-wrapper">
+		
+			<div class="slider">
+				<ul>
+					<li><img src="1.jpg" /><li>
+					<li><img src="2.jpg" /><li>
+					<li><img src="3.jpg" /><li>
+					<li><img src="4.jpg" /><li>
+					<li><img src="5.png" /><li>
+					<li><img src="moony.jpg" /><li>
+				</ul>
+			</div>
+			<div id="upperdiv">
+			</div>
+			<div id="lowerdiv">
+				
+			</div>
+		</div>
+	</div>
+	
+<script>
+	var def=4;
+	var curIndex=def;
+	var sliders=document.getElementsByClassName('slider');
+	var images=sliders[0].getElementsByTagName('img');
+	
+	var screenContainer=document.createElement('div');
+		screenContainer.className="screen-container";
+	var thumbContainer=document.createElement('div');
+		thumbContainer.className="thumb-container";
+		
+		var prevContainer=document.createElement('div');
+			prevContainer.onclick=slideLeft;
+			var prevImg=document.createElement('img');
+				prevImg.src="previous.png";
+		var nextContainer=document.createElement('div');
+			nextContainer.onclick=slideRight;
+			var nextImg=document.createElement('img');
+				nextImg.src="next.png";
+				
+			prevContainer.appendChild(prevImg);
+				prevContainer.className="prev-container";
+				
+			nextContainer.appendChild(nextImg);
+				nextContainer.className="next-container";
+			
+		screenContainer.appendChild(prevContainer);
+		screenContainer.appendChild(nextContainer);
+		
+		
+	var body=document.getElementsByTagName('body');
+		body[0].appendChild(screenContainer);
+		body[0].appendChild(thumbContainer);
+		
+	for(i=0;i<images.length;i++)
+	{
+		var image=document.createElement('img');
+			image.src=images[i].src;
+			image.setAttribute('index',i);
+			image.id="small-"+i;
+			image.onclick=changePic;
+			thumbContainer.appendChild(image);
+			
+		image=document.createElement('img');
+			image.src=images[i].src;
+			image.setAttribute('index',i);
+			var bigImageWrapper=document.createElement('div');
+				bigImageWrapper.className="big-image-wrapper";
+				bigImageWrapper.id="big-"+i; 
+			bigImageWrapper.appendChild(image);
+			screenContainer.appendChild(bigImageWrapper);
+	
+	}
+	
+	function changePic()
+	{
+			clear();
+			curIndex=this.getAttribute('index');
+			document.getElementById('big-'+curIndex).style.zIndex=999;
+			this.style.border="1px solid red";
+			
+	}
+	function clear()
+	{
+		for(i=0;i<images.length;i++)
+		{
+			document.getElementById('big-'+i).style.zIndex=0;
+			document.getElementById('small-'+i).style.border="1px solid white";
+		}
+	}
+	function slideLeft()
+	{
+		if(curIndex<=0)
+		{
+			curIndex=images.length-1;
+		}else
+		{
+			curIndex--;
+		}
+		clear();
+		document.getElementById('big-'+curIndex).style.zIndex=999;
+		document.getElementById('small-'+curIndex).style.border="1px solid red";
+	}
+	function slideRight()
+	{
+		 if(curIndex>=(images.length-1))
+		{
+			curIndex=0;
+		}else
+		{
+			curIndex++;
+		}
+		clear();
+		document.getElementById('big-'+curIndex).style.zIndex=999;
+		document.getElementById('small-'+curIndex).style.border="1px solid red";
+	}
+</script>
+</body>
+</html>

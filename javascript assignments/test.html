@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<ul id="tabs">
+<li class="firsttab"><a href="#">one</a></li>
+<li class="secondtab"><a href="#">two</a></li>
+</ul>
+<script>
+function init() {
+  var tablinks = document.getElementById('tabs').getElementsByTagName('a');
+  for (var i = 0, j = tablinks.length; i < j; i++) {
+    tablinks[i].onclick = doit;
+  }
+}
+function doit() {
+  alert(this.parentNode.className);
+}
+window.onload = init;
+</script>
+</body>
+</html>

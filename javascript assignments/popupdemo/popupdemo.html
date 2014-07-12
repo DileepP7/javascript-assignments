@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+	/* CSS Document */
+*{
+	margin:0px;
+	padding:opx;
+}
+
+
+#main-wrapper{
+	width:1000px;
+	height:auto;
+	background-color:#CCCCCC;
+	margin:0px auto;
+}
+
+#pop-wrapper{display:none;}
+.pop-wrapper{width:100%;height:100%;position:fixed;top:0;left:0;background:rgba(0,0,0,0.5);}
+.dialog-wrapper{margin:0 auto;margin-top:100px;position:relative;display:table;background:#faf;border-radius:10px;padding:10px;}
+.close-wrapper{position:absolute;padding-left:280px;}
+</style>
+</head>
+<body>
+	<div id="main-wrapper">
+		<button onclick="showDialog()">Show</button>	
+	</div>
+	<div id="pop-wrapper"class="pop-wrapper">
+		<div class="dialog-wrapper">
+			<div class="close-wrapper" onclick="hideDialog()"><img src="close.png"/></div>
+			<p>this is test dialoghis is test dialoghis is test dialog</p>
+			<p>this is test dialoghis is test dialoghis is test dialog</p>
+			<p>this is test dialoghis is test dialoghis is test dialog</p>
+			<p>this is test dialoghis is test dialoghis is test dialog</p>
+			<p>this is test dialoghis is test dialoghis is test dialog</p>
+						
+		</div>
+	</div>
+	<script>
+	function showDialog(){
+		document.getElementById('pop-wrapper').style.display="block";
+		}
+		
+	function hideDialog(){
+		document.getElementById('pop-wrapper').style.display="none";
+		}
+	</script>
+</body>
+</html>
